@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h2 class="text-5xl">Phone Hunting</h2>
+        <h2 class="text-5xl">Phone <span class="text-red-500">H</span>unting</h2>
     </header>
     <main class="container mx-auto mt-8">
         <section class="bg-gray-100 p-4 m-4">
@@ -22,12 +22,16 @@
 
         <!-- search result -->
         <section>
+            <!-- loading spinner  -->
+            <div id="loading-spinner" class="text-center my-32 hidden">
+                <span class="loading text-primary loading-spinner loading-lg"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 
             </div>
             <!-- show all button  -->
             <div id="show-all-container" class="hidden text-center my-24">
-                <button class="btn btn-accent text-white">Show All</button>
+                <button onclick="handleShowAll()" class="btn btn-accent text-white">Show All</button>
             </div>
         </section>
     </main>
